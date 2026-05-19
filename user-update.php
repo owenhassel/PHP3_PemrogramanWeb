@@ -29,11 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
 } else {
-
-    if (!isset($_GET['userid'])) {
-        die("<div class='w3-panel w3-red'>User ID not found</div>");
-    }
-
     $userid = $_GET['userid'];
 
     $sql = "SELECT * FROM users WHERE userid='$userid'";

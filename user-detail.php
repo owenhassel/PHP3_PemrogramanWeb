@@ -26,7 +26,7 @@
             </div>
             <p>
                 <b>Name:</b>
-                <?php echo $name; ?>
+                <?php echo $name; ?> 
             </p>
 
             <a href="user-view.php" class="w3-button w3-green">
