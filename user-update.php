@@ -17,8 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $passcode = $_POST['passcode'];
 
     $sql = "UPDATE users 
-            SET userid='$userid',
-                passcode='$passcode'
+            SET userid='$userid', passcode='$passcode'
             WHERE userid='$old_userid'";
 
     if (mysqli_query($conn, $sql)) {
@@ -27,21 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<div class='w3-panel w3-red'>Update failed</div>";
     }
-
-} else {
-    $userid = $_GET['userid'];
-
-    $sql = "SELECT * FROM users WHERE userid='$userid'";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) == 0) {
-        die("<div class='w3-panel w3-red'>User not found</div>");
-    }
-
-    $row = mysqli_fetch_assoc($result);
-
-    $userid = $row['userid'];
-    $passcode = $row['passcode'];
 }
 ?>
 
