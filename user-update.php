@@ -26,6 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "<div class='w3-panel w3-red'>Update failed</div>";
     }
+
+} else {
+    $userid = $_GET['userid'];
+
+    $sql = "SELECT * FROM users WHERE userid='$userid'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+
+    $userid = $row['userid'];
+    $passcode = $row['passcode'];
 }
 ?>
 
