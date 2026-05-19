@@ -46,9 +46,7 @@ $result = mysqli_query($conn, $sql);
         </td>
 
         <td>
-            <img src="<?php echo $row['avatar']; ?>"
-            width="60px"
-            class="w3-circle">
+            <img src="<?php echo $row['avatar']; ?>" width="60px" class="w3-circle">
         </td>
 
         <td>

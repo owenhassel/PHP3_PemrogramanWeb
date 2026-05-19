@@ -22,7 +22,7 @@
 
         <div class="w3-card w3-padding w3-margin-top">
             <div class="w3-center">
-                <img src="<?php echo $avatar; ?>" alt="Avatar" style="width: 150px; height: 150px; border-radius: 50%;">
+                <img src="<?php echo $avatar; ?>" alt="Avatar" width="200px" class="w3-circle">
             </div>
             <p>
                 <b>Name:</b>
